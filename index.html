@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#080E16" />
+  <meta name="description" content="CricketHub — Professional offline cricket scoring app. Score matches ball by ball, view scorecards and statistics. Works completely offline." />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="CricketHub" />
+  <meta name="msapplication-TileColor" content="#080E16" />
+  <title>CricketHub — Cricket Scorer</title>
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="icon" type="image/png" href="icons/icon-192.png" />
+
+  <!-- Google Fonts — preconnect for speed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets — ORDER MATTERS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/screens.css" />
+</head>
+<body class="theme-dark">
+
+  <!-- App Shell -->
+  <div id="app">
+
+    <!-- Offline Banner -->
+    <div id="offline-banner" class="offline-banner hidden">
+      <span>📡</span>
+      <span>You're offline — all features still work!</span>
+    </div>
+
+    <!-- Install Banner -->
+    <div id="install-banner" class="install-banner hidden">
+      <div class="install-banner-content">
+        <div class="install-icon">🏏</div>
+        <div class="install-text">
+          <strong>Install CricketHub</strong>
+          <small>Add to home screen for the best experience</small>
+        </div>
+        <button id="install-btn" class="btn-install">Install</button>
+        <button id="install-dismiss" class="btn-dismiss">✕</button>
+      </div>
+    </div>
+
+    <!-- Screen Container -->
+    <div id="screen-container">
+
+      <!-- SPLASH SCREEN -->
+      <div id="screen-splash" class="screen active" data-screen="splash"></div>
+
+      <!-- HOME SCREEN -->
+      <div id="screen-home" class="screen" data-screen="home"></div>
+
+      <!-- CREATE MATCH SCREEN -->
+      <div id="screen-create-match" class="screen" data-screen="create-match"></div>
+
+      <!-- TEAM MANAGEMENT SCREEN -->
+      <div id="screen-team" class="screen" data-screen="team"></div>
+
+      <!-- TOSS SCREEN -->
+      <div id="screen-toss" class="screen" data-screen="toss"></div>
+
+      <!-- LIVE SCORING SCREEN -->
+      <div id="screen-scoring" class="screen" data-screen="scoring"></div>
+
+      <!-- SCORECARD SCREEN -->
+      <div id="screen-scorecard" class="screen" data-screen="scorecard"></div>
+
+      <!-- MATCH SUMMARY SCREEN -->
+      <div id="screen-summary" class="screen" data-screen="summary"></div>
+
+      <!-- MATCH HISTORY SCREEN -->
+      <div id="screen-history" class="screen" data-screen="history"></div>
+
+      <!-- STATISTICS SCREEN -->
+      <div id="screen-statistics" class="screen" data-screen="statistics"></div>
+
+      <!-- SETTINGS SCREEN -->
+      <div id="screen-settings" class="screen" data-screen="settings"></div>
+
+      <!-- ABOUT SCREEN -->
+      <div id="screen-about" class="screen" data-screen="about"></div>
+
+    </div><!-- /#screen-container -->
+
+    <!-- Global Toast -->
+    <div id="toast" class="toast hidden"></div>
+
+    <!-- Global Modal Overlay (bottom sheet) -->
+    <div id="modal-overlay" class="modal-overlay hidden">
+      <div id="modal" class="modal">
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+  </div><!-- /#app -->
+
+  <!-- JavaScript Modules -->
+  <script type="module" src="js/app.js"></script>
+
+</body>
+</html>

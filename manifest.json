@@ -1,0 +1,41 @@
+{
+  "name": "CricketHub - Cricket Scorer",
+  "short_name": "CricketHub",
+  "description": "Professional offline cricket scoring app — score matches ball by ball, view scorecards and statistics.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0D1117",
+  "theme_color": "#1B5E20",
+  "lang": "en",
+  "categories": ["sports", "utilities"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "New Match",
+      "short_name": "New Match",
+      "url": "/index.html#create-match",
+      "description": "Start a new cricket match"
+    },
+    {
+      "name": "Match History",
+      "short_name": "History",
+      "url": "/index.html#history",
+      "description": "View past matches"
+    }
+  ]
+}
